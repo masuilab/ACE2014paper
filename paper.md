@@ -9,7 +9,8 @@ BabaScript is a JavaScript-based programming system that can handle
 human behavious in the same way as handling the behaviors of computers.
 A BabaScript program can ask a person in the real world to do something
 and receive the result, just like
-a conventional program can calculate a formula and get the result value.
+a conventional computer program can calculate a formula and
+get the result value.
 Using BabaScript, various real-world activities of computers and humans
 can be described as simple scripts,
 and complicated real-world entertainment scenarios can be described
@@ -50,15 +51,14 @@ various real-world entertainment involving computers and humans.
 
 ## Introduction
 
-Computer programs have long been widely used for
+Computer programs have long been used for
 controling the behaviors of machines, but
 human activities have not been described in the same
 programming language style.
 Although all the computers and devices in the whole world
 are now going to be connected to the Internet and
-controlled by a variety of software written in
-various programming languages,
-human behaviors and human tasks have not been
+controlled by a variety of software written in various programming languages,
+human behaviors and human tasks are not
 described in programming language styles, despite the fact that
 human task descriptions are often described in similar styles.
 For example, cooking recipes resemble programming languages
@@ -67,11 +67,12 @@ people should follow for preparing foods.
 
 For example, a recipe for preparing a pasta dish should look like this:
 
-	boil (a pan of water)
-	put (some salt)
-	wait (until water is hot enough)
-	put (pasta into boild water)
-	wait (10 minutes)
+	boil a pan of water
+	put some salt
+	wait until water is hot enough
+	put pasta into boild water
+	wait for 10 minutes
+	...
 
 Here, a condition statment and a sleep statement is used
 in the recipe, just like they are found in common program texts.
@@ -79,7 +80,7 @@ in the recipe, just like they are found in common program texts.
 After serving the dish, it might be useful to ask people whether
 the recipe was good:
 
-    ask (people if the pasta was good enough)
+    ask people if the pasta tasted good
 	
 Job instructions can also be described in
 program-like manner.
@@ -174,6 +175,29 @@ he can do other tasks for the meal.
 Such activities can be described using a programming language
 which supports parallel processing.
 
+## BabaScript
+
+BabaScript is a Node-based programming system that can handle
+instructions to humans.
+
+- 人への命令構文ライブラリ
+- 人オブジェクトの宣言と基本命令
+- オプション情報の付加
+- クライアントライブラリ
+- 人力リソース管理サービス
+- システム利用時の流れ
+- 具体的な実装
+- 命令プロトコル
+- 分散配信
+- 特徴
+
+## Examples
+
+### パスタ?
+### 実世界ゲーム
+
+## Related works
+
 
 <!--
   しかしこれらはまだ限定的であり、できないことも多い
@@ -232,4 +256,5 @@ which supports parallel processing.
    みたいなことは人間にしかできない
    -->
   
+
   
