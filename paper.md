@@ -197,8 +197,38 @@ instructions to humans.
 
 ## Related works
 
-Many systems and languages for integrating computer and human activities
-have been proposed, mainly for 
+Many “human computation”[] systems
+for integrating computer and human activities have been proposed recently.
+The main purpose of such systems are designed for crowdsourcing activities,
+and among them, Amazon's Mechanical Turk[amt] is the largest platform
+at this moment
+
+<!--
+計算機では処理できないようなタスクを解決するために、人を計算資源としてプログラムに組み込む手法はヒューマンコンピュテーション\cite{humancomputation}と呼ばれ、様々な研究が行われている。
+米Amazonが運営している AmazonMechanicalTurk\cite{amt} は、クラウドソーシングのためのプラットフォームだ。
+mTurk API を通し、人間に対してタスクの実行を依頼することができる。
+AUTOMAN\cite{automan}は、crowdprogrammingという概念を唱え、通常のプログラミング言語内でコンピュータによる計算と人による計算を統合した。
+CrowdForge\cite{crowdforge}は、MapReduceのような機能をクラウドソーシングのためのフレームワークだ。
+クラウドソーシングするタスクを適切に分割し、人力で解かせた後、集合させるといったことができる。
+jabberwocky\cite{jabberwocky}は、クラウドソーシングプラットフォームを自由に作れる・再利用できる仕組みをもったDormouseやMapReduce的に人リソースを扱えるManReduce、SQL風のスクリプト言語Dogから構成される、クラウドソーシングのためのフレームワークだ。
+CrowdDB\cite{crowddb}では機械だけでは答えられないようなDBへのクエリに対し、クラウドソーシングを使うことで返答させるためのSQLライクなプログラミングを提案している。
+CyLog\cite{cylog}はDatalogに似たヒューマンコンピュテーションのためのプログラミング言語だ。
+人をデータソースとしてプログラムの中で利用する手法を提案している。
+これらの研究は、人を計算資源・データソースとして捉え、コンピュータの代替として人を利用している。
+本研究では、人の行動そのものをプログラムとして記述し、実行可能なものにすることを目的としている。
+
+ユビキタスコンピューティングの研究分野においては、Human as Sensor といった概念も存在しており、研究が行われている。
+MoboQ\cite{moboq}では、場所ベースのQ\&Aサービスを実装し、その効果を検証した。
+Moboqではプラットフォームとしてソーシャルメディアを利用しており、ソーシャルメディア上の人たちをセンサーとして利用している。
+スマートフォンを使ったセンシングのためのプラットフォームとしては、PRISM\cite{prism}などが発表されている。
+これらの研究では、人をセンサーとして利用し、情報を収集することを目的としている。
+本研究では、人の行動をプログラムとして記述することを目的としており、その利用方法はセンサーに限定されたものではない。
+
+人のワークフローを定義するWebサービスとしては、atled\cite{atled}やQuestetra\cite{questetra}などが存在するが、これらのサービスは、人の行動をプログラムで記述するものではない。
+BabaScript環境では、人・コンピュータの動作を同一のプログラム上で記述することが可能だ。
+-->
+
+
 
 ## Conclusions
 
