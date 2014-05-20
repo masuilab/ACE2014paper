@@ -22,7 +22,7 @@ the behaviors of computer systems, and not designed for describing
 human behavious.
 
 If a programming system can handle both computer resources and
-humans in the similar way, various 
+humans in the similar way, various
 
 
 
@@ -80,7 +80,7 @@ After serving the dish, it might be useful to ask people whether
 the recipe was good:
 
     ask people if the pasta tasted good
-	
+
 Job instructions can also be described in
 program-like manner.
 In a conference registration counter, people may be instructed
@@ -143,7 +143,7 @@ We can use sensor devices or consult the Web to tell if
 but we can also ask people if it is likely to rain or not.
 We can use a special robot arm to take in the laundry,
 while it would be easier to ask the family member to do the same thing.
-In this way, 
+In this way,
 either a machine or a human can sense data or perform action
 in almost the same way, and
 in some cases machines can do the job better than humens,
@@ -151,7 +151,7 @@ and in other cases humans are better at the job.
 
 Simple household chores can be specified using
 program-like descriptions.
-If you have to prepare dinnaer at 19:00, 
+If you have to prepare dinner at 19:00,
 you may have to behave like this:
 
 - wash rice at 18:00
@@ -161,7 +161,7 @@ you may have to behave like this:
 - set the heat low after hearing the boiling sound
 - turn of the gas after 10 minites
 
-Sensing the boiling sound is easy for humans, while simple 
+Sensing the boiling sound is easy for humans, while simple
 sensing devices cannot detect whether the pot is heated enough.
 Waiting for 10 minites is easy for computers, but that is
 not easy for humans without using clocks.
@@ -174,21 +174,139 @@ he can do other tasks for the meal.
 Such activities can be described using a programming language
 which supports parallel processing.
 
-## BabaScript
+## BabaScript Programming Environment
 
-BabaScript is a Node-based programming system that can handle
+BabaScript is a node.js-based programming system that can handle
 instructions to humans.
 
-- 人への命令構文ライブラリ
-- 人オブジェクトの宣言と基本命令
-- オプション情報の付加
-- クライアントライブラリ
-- 人力リソース管理サービス
-- システム利用時の流れ
-- 具体的な実装
-- 命令プロトコル
-- 分散配信
-- 特徴
+Babascriptプログラミング環境は、人と計算機を統合的にプログラミングするためのプログラミング環境だ。
+人への命令構文を実装したオブジェクト(以下、人オブジェクト)を宣言可能にするライブラリと
+命令を受け取り、命令に対する返り値を入力させるためのクライアントアプリケーションを組み合わせることで実現する。
+
+
+### Babascript
+
+Babascript は、人オブジェクトを宣言可能にするためのライブラリだ。
+人オブジェクトは、オブジェクトに定義されていないメソッド全てを人への命令コマンドとして解釈する。
+人への命令コマンドは、メソッド名と引数を元に命令内容を生成し、命令を送信する。
+
+We implement Library that can declare human object.
+Human object has command that orders task to human.
+
+#### Initializing Human Object and Basic Command
+
+Babascript を使ったプログラム例を図nに示す。
+Figure n sample program
+
+BabaScript = require("babascript")
+
+baba = new BabaScript "baba"
+baba.hearing_the_boiling_sound({format: "boolean"}, function(result){
+	if(result.value === true){
+		#...
+	}else{
+		#...
+	}
+})
+
+- 人オブジェクトの宣言
+	- 最初にbabascript をプログラムからimportする
+	- babascriptをインスタンス化、オブジェクトを生成
+		- インスタンス化時、idを指定する。
+			- ここで指定した id に命令を配信する
+- 人オブジェクトの基本命令
+	- オブジェクトに対して命令コマンドを実行する
+		- オプション情報を第一引数に指定する
+		- 最後の引数にコールバック関数を指定する
+	- コールバック関数
+		- 引数
+			- 返り値
+				- Babascript client で入力された値
+			- 実行者オブジェクト
+				- 命令を実行した人オブジェクト
+
+### Optional Information
+
+- 人への命令コマンドの第一引数にはオプション情報を付加できる
+	- クライアントアプリケーション側に情報として送信される
+	- 例えば、型の指定
+		- Boolean で返さなくてはいけない、など
+		- 全ての型を想定したプログラムは難しい
+	- 特別なオプション
+		- broadcast
+		- 同じIDを持つ全員に対して命令を同時に送信
+		- 指定した数値分、返り値を得られたらコールバック関数を実行する
+
+### Babascript Client
+
+- 命令を受け取り、値をプログラムに返すための一連の機能を持つクライアントライブラリ
+	- これを利用して、自由にクライアント側をプログラム可能
+	- 図nのように、Babascript からのメッセージを受け取る
+		- 受け取ったメッセージを人に伝えるようなプログラムを書いていく
+		- clientオブジェクトは、 returnValue メソッドを使って、Babascriptに返り値を送信する
+
+Figure n Babascript client sample program
+
+Client = require "babascript-client"
+
+client = new Client("baba")
+client.on("get_task", function(result){
+	order = new Order(result.key)
+	input = new Input(result.format)
+	input.on("submit", function(value){
+			client.returnValue(value)
+	}
+});
+
+
+#### example: Client Application
+- クライアントライブラリを使ったアプリケーションは図nのようになる
+
+### Babascript's usage
+
+以下のよう流れで利用可能である。
+- 人オブジェクトを宣言する
+- 人への命令コマンドを実行する
+- 生成された命令はクライアント側に配信される
+- クライアント側で命令を人に伝える
+- 人が処理し、結果を入力する
+- 処理結果と元にコールバック関数が実行される
+- 返り値を元に処理を継続させる
+
+### Detail implementation
+
+- Babascript & Babascript Client は node.js で実装した
+	- Babascript は、 node.js 環境上でのみ動作する
+	- Babascript Client はnode.ljs, Webブラウザ上で動作する
+- システム全体図
+	- 図nのようになる
+
+### Command protocol
+
+- 命令コマンドによって生成される命令は以下の情報で構成される
+	- 配信ID
+	- 命令タイプ
+	- 命令内容
+	- コールバックID
+	- オプション情報
+- 配信ID
+	- 命令を送りたいIDを指定する
+- 命令タイプ
+	- broadcast, unicast, eval の3種類の命令タイプが存在する
+- 命令内容
+	- メソッド名がそのまま命令内容となる
+- コールバックID
+	- 命令自体を特定するためのランダムな文字列
+- オプション情報
+	- 基本情報以外にクライアント側に伝えたい情報を記述する
+- これらをjsonに変換する
+	task = {
+		id: "baba",
+		type: "eval",
+		key: "hearing_the_boiling_sound",
+		cid: "1609651930630207",
+		option: {format: "boolean"}
+	}
 
 ## Examples
 
@@ -336,10 +454,7 @@ applications, and see the effectiveness.
    モータを回すとか
   世の中のあらゆる手順や行動をプログラムとして記述する
   人間を機械と同じように記述できる
-  
+
   綺麗な景色だと写真をとる
    みたいなことは人間にしかできない
    -->
-  
-
-  
