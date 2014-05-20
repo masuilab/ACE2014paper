@@ -2,7 +2,7 @@
 
 ## Abstract
 
-We introduce the "BabaScript" programming system that is useful for
+We introduce the &#147;BabaScript&#148; programming system that is useful for
 writing scripts required for real-world entertainment scenarios
 where both computers and humans are involved.
 BabaScript is a JavaScript-based programming system that can handle
@@ -203,16 +203,22 @@ mTurk API を通し、人間に対してタスクの実行を依頼すること�
 -->
 
 Many “human computation”[] systems
-for integrating computer and human activities have been proposed recently.
-Most of them are designed for supporting crowdsourcing activities,
+for integrating computer activities and human activities have been proposed recently.
+Most of them are designed for supporting crowdsourcing,
 and Amazon's Mechanical Turk (mTurk) is currently the largest crowdsourcing platform.
-Using mTurk, a requester(?依頼者) can ask other people (workers)
-in all over the world to perform his task by paying money.
+A mTurk user can ask other people (workers) on the net
+to perform his task by paying money.
 
 <!-- AUTOMAN\cite{automan}は、crowdprogrammingという概念を唱え、通常のプログラミング言語内でコンピュータによる計算と人による計算を統合した。-->
+Tasks to mTurk workers are described in natural language like English,
+but systems like AUTOMAN[] allows "crowdprogramming", where
+tasks to the workers can be described in special programming language.
+
+<!--
 ??? impelemented the AUTOMAN system[]
 “crowdprogramming”
 (BabaScriptとの違いは?)
+-->
 
 <!--
 CrowdForge\cite{crowdforge}は、MapReduceのような機能をクラウドソーシングのためのフレームワークだ。
