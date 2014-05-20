@@ -248,7 +248,7 @@ an work as sensors (for the query?).
 スマートフォンを使ったセンシングのためのプラットフォームとしては、PRISM\cite{prism}などが発表されている。
 -->
 PRISM[] is a sensor network platform where
-smart phones are used as sensing nodes.
+people's smart phones are used as sensing nodes.
 
 <!--
 これらの研究では、人をセンサーとして利用し、情報を収集することを目的としている。
