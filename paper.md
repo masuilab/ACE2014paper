@@ -242,7 +242,7 @@ MoboQ\cite{moboq}では、場所ベースのQ\&Aサービスを実装し、そ�
 Moboqではプラットフォームとしてソーシャルメディアを利用しており、ソーシャルメディア上の人たちをセンサーとして利用している。
 -->
 Mobiq[] is a location-based Q&A system where people on the social network systems
-an work as sensors (for the query?).
+work as sensors (for the query?).
 
 <!--
 スマートフォンを使ったセンシングのためのプラットフォームとしては、PRISM\cite{prism}などが発表されている。
@@ -267,9 +267,9 @@ BabaScript環境では、人・コンピュータの動作を同一のプログ�
 
 ## Conclusions
 
-We introduced the BabaSript programing system that can "program"
-human behaviors as well as computing behaviors, and showed that
-BabaScript is a very good programming framework for
+We introduced the BabaSript programing system that can be used for
+programming human behaviors as well as computing behaviors, and showed that
+BabaScript is a convenient programming framework for
 realtime and real-world entertainment environment.
 We are planning to use BabaScript for a wide range of
 applications, and see the effectiveness.
