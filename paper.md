@@ -7,12 +7,12 @@ writing scripts required for real-world entertainment scenarios
 where both computers and humans play important roles.
 BabaScript is a JavaScript-based programming system that can handle
 human behavious in the same way as controling the behaviors of computers.
-A BabaScript program can ask a person in the real world to do something
-and receive the result, just like
+A BabaScript program can ask a person in the real world to perform some action
+and receive the result of the action, just like
 a conventional computer program can calculate a formula and
 get the result value.
 Using BabaScript, various real-world activities of computers and humans
-can be described as simple scripts,
+can be described in simple scripts,
 and complicated real-world entertainment scenarios can be described
 easily.
 
