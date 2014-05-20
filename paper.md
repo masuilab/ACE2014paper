@@ -214,6 +214,7 @@ Tasks to mTurk workers are described in natural language like English,
 but systems like AUTOMAN[] allows "crowdprogramming", where
 tasks to the workers can be described in special programming language.
 
+
 <!--
 ??? impelemented the AUTOMAN system[]
 “crowdprogramming”
@@ -224,11 +225,13 @@ tasks to the workers can be described in special programming language.
 CrowdForge\cite{crowdforge}は、MapReduceのような機能をクラウドソーシングのためのフレームワークだ。
 クラウドソーシングするタスクを適切に分割し、人力で解かせた後、集合させるといったことができる。-->
 
-
-
 <!--
 jabberwocky\cite{jabberwocky}は、クラウドソーシングプラットフォームを自由に作れる・再利用できる仕組みをもったDormouseやMapReduce的に人リソースを扱えるManReduce、SQL風のスクリプト言語Dogから構成される、クラウドソーシングのためのフレームワークだ。
+-->
+<!--
 CrowdDB\cite{crowddb}では機械だけでは答えられないようなDBへのクエリに対し、クラウドソーシングを使うことで返答させるためのSQLライクなプログラミングを提案している。
+-->
+<!--
 CyLog\cite{cylog}はDatalogに似たヒューマンコンピュテーションのためのプログラミング言語だ。
 人をデータソースとしてプログラムの中で利用する手法を提案している。
 これらの研究は、人を計算資源・データソースとして捉え、コンピュータの代替として人を利用している。
@@ -238,9 +241,9 @@ CyLog\cite{cylog}はDatalogに似たヒューマンコンピュテーション�
 <!--
 ユビキタスコンピューティングの研究分野においては、Human as Sensor といった概念も存在しており、研究が行われている。-->
 
-A little different approach for integrating human resources with
-computing environment is “human as sensors” approach,
-where people in the real world can work as sensors for
+A slightly different approach to integrating human resources with
+computing environment is called “human as sensors” (HAS),
+where people in the real world can work as sensors in
 ubiquitous sensing networks.
 <!-- http://wsnblog.com/2010/11/23/human-as-sensor/ ペントランドの講演 -->
 <!--
@@ -261,13 +264,14 @@ people's smart phones are used as sensing nodes.
 本研究では、人の行動をプログラムとして記述することを目的としており、その利用方法はセンサーに限定されたものではない。
 -->
 
-
+In these HAS systems, people carrying various devices work as
+ubiquitous sensors, and people are not expected to perform tasks
+based on their thoughts and decisions.
 
 <!--
 人のワークフローを定義するWebサービスとしては、atled\cite{atled}やQuestetra\cite{questetra}などが存在するが、これらのサービスは、人の行動をプログラムで記述するものではない。
 BabaScript環境では、人・コンピュータの動作を同一のプログラム上で記述することが可能だ。
 -->
-
 
 
 
