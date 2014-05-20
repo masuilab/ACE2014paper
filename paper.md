@@ -200,7 +200,9 @@ instructions to humans.
 Many “human computation”[] systems
 for integrating computer and human activities have been proposed recently.
 Most of them are designed for supporting crowdsourcing activities,
-and Amazon's Mechanical Turk[amt] is currently the largest crowdsourcing platform.
+and Amazon's Mechanical Turk (mTurk) is currently the largest crowdsourcing platform.
+Using mTurk, a requester(?依頼者) can ask other people (workers)
+in all over the world to perform his task by paying some amount of money.
 
 <!--
 計算機では処理できないようなタスクを解決するために、人を計算資源としてプログラムに組み込む手法はヒューマンコンピュテーション\cite{humancomputation}と呼ばれ、様々な研究が行われている。
