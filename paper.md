@@ -53,19 +53,17 @@ various real-world entertainment involving computers and humans.
 
 Computer programs have long been used for
 controling the behaviors of machines, but
-human activities have not been described in the same
-programming language style.
-Although all the computers and devices in the whole world
+human activities have not been described in the same style.
+Almost all the computers and devices in the whole world
 are now going to be connected to the Internet and
 controlled by a variety of software written in various programming languages,
-human behaviors and human tasks are not
+but human behaviors and human tasks are not
 described in programming language styles, despite the fact that
 human task descriptions are often described in similar styles.
 For example, cooking recipes resemble programming languages
-because they describe the order of tasks which 
+because they describe the order of tasks that
 people should follow for preparing foods.
-
-For example, a recipe for preparing a pasta dish should look like this:
+A recipe for preparing a pasta dish should look like this:
 
 	boil a pan of water
 	put some salt
@@ -75,7 +73,8 @@ For example, a recipe for preparing a pasta dish should look like this:
 	...
 
 Here, a condition statment and a sleep statement is used
-in the recipe, just like they are found in common program texts.
+in the recipe, just like statements in
+conventional programming languages.
 
 After serving the dish, it might be useful to ask people whether
 the recipe was good:
@@ -91,7 +90,7 @@ to work like this:
 	  open all the registration counters
 	end
 
-The structure of these instructions are
+In this way, structure of these instructions are
 similar to programming languages, but
 computer languages and instructions for humans have been
 used in different situations and environments, and they were
@@ -198,6 +197,17 @@ instructions to humans.
 
 ## Related works
 
+Many systems and languages for integrating computer and human activities
+have been proposed, mainly for 
+
+## Conclusions
+
+We introduced the BabaSript programing system that can "program"
+human behaviors as well as computing behaviors, and showed that
+BabaScript is a very good programming framework for
+realtime and real-world entertainment environment.
+We are planning to use BabaScript for a wide range of
+applications, and see the effectiveness.
 
 <!--
   しかしこれらはまだ限定的であり、できないことも多い
