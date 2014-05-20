@@ -1,18 +1,18 @@
-# BabaScript: A Programming Framework for Real-world Entertainment.
+# BabaScript: A Programming Framework for Real-world Entertainment
 
 ## Abstract
 
 We introduce the &#147;BabaScript&#148; programming system that is useful for
 writing scripts required for real-world entertainment scenarios
-where both computers and humans are involved.
+where both computers and humans play important roles.
 BabaScript is a JavaScript-based programming system that can handle
-human behavious in the same way as handling the behaviors of computers.
-A BabaScript program can ask a person in the real world to do something
-and receive the result, just like
+human behavious in the same way as controling the behaviors of computers.
+A BabaScript program can ask a person in the real world to perform some action
+and receive the result of the action, just like
 a conventional computer program can calculate a formula and
 get the result value.
 Using BabaScript, various real-world activities of computers and humans
-can be described as simple scripts,
+can be described in simple scripts,
 and complicated real-world entertainment scenarios can be described
 easily.
 
@@ -23,12 +23,6 @@ human behavious.
 
 If a programming system can handle both computer resources and
 humans in the similar way, various
-
-
-
-Using conventional programming languages,
-
-
 
 Many recent programming systems support croudsourcing features
 where computer programs can utilize human resources in the whole world,
@@ -384,14 +378,20 @@ people's smart phones are used as sensing nodes.
 
 In these HAS systems, people carrying various devices work as
 ubiquitous sensors, and people are not expected to perform tasks
-based on their thoughts and decisions.
+based on their thoughts and decisions;
+only the behavior of people are sensed by devices and the sensed
+data are used for various calculations.
 
 <!--
 人のワークフローを定義するWebサービスとしては、atled\cite{atled}やQuestetra\cite{questetra}などが存在するが、これらのサービスは、人の行動をプログラムで記述するものではない。
 BabaScript環境では、人・コンピュータの動作を同一のプログラム上で記述することが可能だ。
 -->
 
-
+There are many systems and services like
+atled[atled]Questetra[Questetra]
+with which task workflow can be described and shared.
+The tasks in these systems are static, and
+cannot be used dynamically.
 
 ## Conclusions
 
